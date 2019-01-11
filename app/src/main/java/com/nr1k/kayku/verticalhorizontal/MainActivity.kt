@@ -1,5 +1,6 @@
 package com.nr1k.kayku.verticalhorizontal
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -14,17 +15,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //if (windowManager.defaultDisplay.rotation == Surface.ROTATION_90) {
-        //    toast("horizontal")
-        //}
+        id_boton.setOnClickListener{
 
-        if(id_horizontal != null){
+            if(id_horizontal != null){
 
-            horizontal = true
-        }
+                horizontal = true
+            }
 
-        if (horizontal){
-            toast("Horizontal")
+            if (horizontal){
+                toast("Horizontal")
+            }else{
+                val intent = Intent(this, Activity2::class.java).apply{
+                    putExtra("id",5)
+                }
+                startActivity(intent)
+            }
         }
     }
 }
