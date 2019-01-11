@@ -17,17 +17,23 @@ class MainActivity : AppCompatActivity() {
 
         id_boton.setOnClickListener{
 
+            //Si el id del textview de la vista en horizontal esta activo le asignamos
+            //el valor true a la variable horizontal
             if(id_horizontal != null){
 
                 horizontal = true
             }
 
+            //si es true que muestre un toast
             if (horizontal){
                 toast("Horizontal")
             }else{
+                //si es false creamos un intent que llame a la Activity2
                 val intent = Intent(this, Activity2::class.java).apply{
+                    //Con el putExtra enviamos datos a la activity nueva
                     putExtra("id",5)
                 }
+                //iniciamos la activity del intent
                 startActivity(intent)
             }
         }
