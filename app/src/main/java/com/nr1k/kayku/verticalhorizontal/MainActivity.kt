@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
 
 
@@ -29,12 +30,15 @@ class MainActivity : AppCompatActivity() {
                 toast("Horizontal")
             }else{
                 //si es false creamos un intent que llame a la Activity2
-                val intent = Intent(this, Activity2::class.java).apply{
+                //val intent = Intent(this, Activity2::class.java).apply{
                     //Con el putExtra enviamos datos a la activity nueva
-                    putExtra("id",5)
-                }
+                //    putExtra("id",5)
+                //}
                 //iniciamos la activity del intent
-                startActivity(intent)
+                //startActivity(intent)
+
+                //Inicia la actividad pero simplificado con anko
+                startActivity(intentFor<Activity2>("id" to 5))
             }
         }
     }
