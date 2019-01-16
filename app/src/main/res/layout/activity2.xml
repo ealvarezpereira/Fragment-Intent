@@ -5,11 +5,20 @@
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent">
 
+    <fragment
+            android:layout_width="348dp"
+            android:layout_height="279dp" android:name="com.nr1k.kayku.verticalhorizontal.FrankMento"
+            android:id="@+id/fragmentoActivity2"
+            class="com.nr1k.kayku.verticalhorizontal.FrankMento"
+            app:layout_constraintTop_toBottomOf="@+id/texto" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout="@layout/fragment_frank_mento"/>
     <TextView
             android:text="What's a woman?"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2"
+            android:id="@+id/texto"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="117dp" app:layout_constraintEnd_toEndOf="parent"
     />

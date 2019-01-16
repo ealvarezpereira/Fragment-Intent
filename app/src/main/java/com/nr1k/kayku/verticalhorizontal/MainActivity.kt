@@ -1,13 +1,11 @@
 package com.nr1k.kayku.verticalhorizontal
 
-import android.content.Intent
+
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
-
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,6 +26,12 @@ class MainActivity : AppCompatActivity() {
             //si es true que muestre un toast
             if (horizontal){
                 toast("Horizontal")
+                if (savedInstanceState == null) {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .add(R.id.fragment, FrankMento.newInstance(), "Frankmento")
+                        .commit()
+                }
             }else{
                 //si es false creamos un intent que llame a la Activity2
                 //val intent = Intent(this, Activity2::class.java).apply{
@@ -38,8 +42,10 @@ class MainActivity : AppCompatActivity() {
                 //startActivity(intent)
 
                 //Inicia la actividad pero simplificado con anko
-                startActivity(intentFor<Activity2>("id" to 5))
+                startActivity(intentFor<Activity2>("id" to 663533850))
             }
         }
     }
 }
+
+
