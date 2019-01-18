@@ -14,6 +14,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
+        if(id_horizontal != null){
+
+            horizontal = true
+        }
+
+        //si es true que muestre un toast
+        if (horizontal){
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.frankmentoLand, FrankMento.newInstance(), "Frankmento")
+                .commit()
+        }
+
         id_boton.setOnClickListener{
 
             //Si el id del textview de la vista en horizontal esta activo le asignamos
@@ -26,12 +41,6 @@ class MainActivity : AppCompatActivity() {
             //si es true que muestre un toast
             if (horizontal){
                 toast("Horizontal")
-                if (savedInstanceState == null) {
-                    supportFragmentManager
-                        .beginTransaction()
-                        .add(R.id.fragment, FrankMento.newInstance(), "Frankmento")
-                        .commit()
-                }
             }else{
                 //si es false creamos un intent que llame a la Activity2
                 //val intent = Intent(this, Activity2::class.java).apply{

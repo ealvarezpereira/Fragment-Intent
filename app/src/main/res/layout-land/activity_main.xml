@@ -26,14 +26,14 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.136" android:id="@+id/id_horizontal"
             app:layout_constraintHorizontal_bias="0.085"/>
-    <fragment
-            android:layout_width="271dp"
-            android:layout_height="231dp" android:name="com.nr1k.kayku.verticalhorizontal.FrankMento"
-            android:id="@+id/fragment"
-            class="com.nr1k.kayku.verticalhorizontal.FrankMento"
+    <FrameLayout
+            android:layout_width="282dp"
+            android:layout_height="205dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.806"
-            tools:layout="@layout/fragment_frank_mento"/>
+            app:layout_constraintStart_toEndOf="@+id/id_boton"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.519" android:id="@+id/frankmentoLand">
+
+    </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -20,7 +20,7 @@ class Activity2 : AppCompatActivity() {
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.fragmentoActivity2, FrankMento.newInstance(), "Frankmento")
+                .add(R.id.frankmento, FrankMento.newInstance(), "Frankmento")
                 .commit()
         }
     }
